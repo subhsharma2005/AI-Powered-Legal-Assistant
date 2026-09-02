@@ -77,10 +77,10 @@ def search_legal_ai():
         Your answer must be grounded ONLY in the context. Cite specific case IDs like (case_2) or (case_116).
         
         FORMAT FOR PRECEDENT MODE:
-        🏛️ Court: [Extract Court Name]
-        ⚖️ Parties: [Extract Appellant vs. Respondent]
-        📖 Key Provisions: [List Acts/Sections, e.g., Section 302 IPC]
-        💡 Legal Principle (Ratio): [1-sentence core legal reasoning]
+         Court: [Extract Court Name]
+         Parties: [Extract Appellant vs. Respondent]
+         Key Provisions: [List Acts/Sections, e.g., Section 302 IPC]
+         Legal Principle (Ratio): [1-sentence core legal reasoning]
         ---------------------------------------------------------
         [Detailed Answer with citations to the Precedents]
 
