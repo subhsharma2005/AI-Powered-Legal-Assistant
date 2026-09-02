@@ -47,7 +47,7 @@ def sliding_window_chunk(text, max_words=250, overlap=50):
 
 def run_ingestion():
     if not DB_URI:
-        print("❌ Error: SUPABASE_URI not found in .env file.")
+        print(" Error: SUPABASE_URI not found in .env file.")
         return
 
     conn = psycopg2.connect(DB_URI)
@@ -116,14 +116,14 @@ def run_ingestion():
                 ON CONFLICT (chunk_id) DO NOTHING; -- Prevents duplicate errors
             """, mini_batch)
             conn.commit()
-            print(f"  ✅ Uploaded chunks {i} to {i + len(mini_batch)}")
+            print(f"   Uploaded chunks {i} to {i + len(mini_batch)}")
         except Exception as e:
-            print(f"  ❌ Batch failed at chunk {i}: {e}")
+            print(f"   Batch failed at chunk {i}: {e}")
             conn.rollback()
             
     cur.close()
     conn.close()
-    print("\n🎉 DATA INGESTION COMPLETE! Your database is now populated with high-visibility vectors.")
+    print("\nDATA INGESTION COMPLETE! Your database is now populated with high-visibility vectors.")
 
 if __name__ == "__main__":
     run_ingestion()
