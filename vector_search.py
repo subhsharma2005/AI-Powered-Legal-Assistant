@@ -44,11 +44,11 @@ def test_vector_search(query_text):
     conn.close()
 
     if not results:
-        print("❌ No results found. Is the database empty?")
+        print(" No results found. Is the database empty?")
         return
 
     print("\n" + "="*80)
-    print("🏆 TOP 5 RETRIEVED CHUNKS")
+    print(" TOP 5 RETRIEVED CHUNKS")
     print("="*80)
     
     for i, row in enumerate(results):
@@ -57,7 +57,7 @@ def test_vector_search(query_text):
         text = row[2]
         score = row[3]
         
-        print(f"\n🥇 RANK {i+1} | Score: {score:.4f} | Case: {case_num} | Role: {role}")
+        print(f"\n RANK {i+1} | Score: {score:.4f} | Case: {case_num} | Role: {role}")
         print("-" * 80)
         print(f"{text[:1000]}...\n")
 
