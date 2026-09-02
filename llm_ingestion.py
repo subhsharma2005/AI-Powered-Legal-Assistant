@@ -101,7 +101,7 @@ def ask_legal_ai(user_question):
     )
 
     print("\n" + "=" * 80)
-    print("⚖️ FINAL LEGAL ANSWER:")
+    print(" FINAL LEGAL ANSWER:")
     print("=" * 80)
     print(response.text)
     print("=" * 80 + "\n")
